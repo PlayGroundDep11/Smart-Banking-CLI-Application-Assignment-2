@@ -97,55 +97,12 @@ public class SmartBankingCLI{
                     newCustomerDetails[newCustomerDetails.length - 1][2] = initialDeposit + "" ;
                     customerDetails = newCustomerDetails ;
                    
-                    System.out.printf("Added"); //
+                    System.out.printf("\t%sID : %s Name : %s Added Successfully !!!%s\n",COLOR_GREEN_BOLD, customerDetails[customerDetails.length-1][0], customerDetails[customerDetails.length - 1][1], RESET); 
                     System.out.print("\tDo you want to add another{Y/N} :");
                     if (scanner.nextLine().strip().toUpperCase().equals("Y")) continue;
-                    System.out.println(Arrays.toString(customerDetails[0]));
-                    System.out.println(Arrays.toString(customerDetails[1]));
-                    System.out.println(Arrays.toString(customerDetails[2]));
-                    System.out.println(Arrays.toString(customerDetails[3]));
-                    System.exit(0);
                     screen = DASHBOARD;
                     break;
                 case DEPOSITS :
-                    // String accNumber ;
-                    // loop :
-                    // do {
-                    //     valid = false ;
-                    //     System.out.print("Enter Account Number :");
-                    //     accNumber = scanner.nextLine().strip() ;
-                    //     if(accNumber.isBlank()){
-                    //         System.out.printf(ERROR_MSG,"Acc number cannot be empty");
-                    //         valid = true ;
-                    //         continue ;
-                    //     }
-                    //     if(accNumber.startsWith("SDB-") || accNumber.length()<5 ){
-                    //         System.out.printf(ERROR_MSG, "Invalid Format!") ;
-                    //         valid = true ;
-                    //         continue ;
-                    //     }
-                    //     for(int i = 4 ; i < accNumber.length(); i++){
-                    //         if( !Character.isDigit(accNumber.charAt(i)) ){
-                    //              System.out.printf(ERROR_MSG,"Invalid Format");
-                    //              valid = true ;
-                    //              continue loop ;
-                    //         }
-                    //     }
-                    //     int index = -1;
-                    //     for(int i = 0 ; i < cutomerIDarray.length ; i++){
-                    //       if(accNumber.equalsIgnoreCase(cutomerIDarray[i])){
-                    //         System.out.println("Account found");
-                    //         index = i ;
-                    //       }
-                    //     }
-                    //     if(index<0){
-                    //         System.out.printf(ERROR_MSG,"Account Number not found!!");
-                    //         valid = true ;
-                    //         continue ;
-                    //     }
-                    //     System.out.println(customerNames[index]);
-                    //     break;
-                    // } while (valid);
             }
         }while (true);
     }
